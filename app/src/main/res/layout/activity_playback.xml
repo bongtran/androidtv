@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/playback_controls_fragment"
-        android:name="jp.jcom.mytv.data.ui.PlaybackFragment"
+        android:name="jp.jcom.mytv.ui.PlaybackFragment"
         android:tag="@string/playback_tag"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

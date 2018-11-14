@@ -1,4 +1,4 @@
-package com.example.android.tvleanback;
+package jp.jcom.mytv;
 
 import android.content.ContentValues;
 

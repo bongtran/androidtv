@@ -48,7 +48,7 @@
         android:logo="@drawable/videos_by_google_banner"
         android:theme="@style/Theme.Leanback">
         <activity
-            android:name="jp.jcom.mytv.data.ui.MainActivity"
+            android:name=".ui.MainActivity"
             android:icon="@drawable/videos_by_google_banner"
             android:label="@string/app_name"
             android:logo="@drawable/videos_by_google_banner"
@@ -61,7 +61,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="jp.jcom.mytv.data.mobile.MobileWelcomeActivity">
+        <activity android:name=".mobile.MobileWelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -72,7 +72,7 @@
         <meta-data android:name="android.app.default_searchable"
             android:value=".ui.VideoDetailsActivity" />
         <activity
-            android:name="jp.jcom.mytv.data.ui.VideoDetailsActivity"
+            android:name=".ui.VideoDetailsActivity"
             android:exported="true"
             android:theme="@style/Theme.Leanback.Details">
 
@@ -88,18 +88,18 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name="jp.jcom.mytv.data.ui.PlaybackActivity"
+            android:name=".ui.PlaybackActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|layoutDirection"
             android:launchMode="singleTask"
             android:resizeableActivity="true" />
         <activity
-            android:name="jp.jcom.mytv.data.ui.VerticalGridActivity"
+            android:name=".ui.VerticalGridActivity"
             android:exported="true"
-            android:parentActivityName="jp.jcom.mytv.data.ui.MainActivity"
+            android:parentActivityName=".ui.MainActivity"
             android:theme="@style/Theme.Leanback.VerticalGrid" />
-        <activity android:name="jp.jcom.mytv.data.ui.SearchActivity" />
+        <activity android:name=".ui.SearchActivity" />
         <activity
-            android:name="jp.jcom.mytv.data.ui.GuidedStepActivity"
+            android:name=".ui.GuidedStepActivity"
             android:theme="@style/Theme.Example.Leanback.GuidedStep" />
 
         <!-- Provides search suggestions for keywords against video metadata. -->
@@ -113,7 +113,7 @@
         </provider>
 
         <receiver
-            android:name="jp.jcom.mytv.data.recommendation.RecommendationReceiver"
+            android:name=".recommendation.RecommendationReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
@@ -125,19 +125,19 @@
             android:name="jp.jcom.mytv.data.FetchVideoService"
             android:exported="false" />
         <service
-            android:name="jp.jcom.mytv.data.recommendation.UpdateRecommendationsService"
+            android:name=".recommendation.UpdateRecommendationsService"
             android:enabled="true" />
 
-        <activity android:name="jp.jcom.mytv.data.ui.OnboardingActivity"
+        <activity android:name=".ui.OnboardingActivity"
             android:enabled="true"
             android:exported="true"
             android:theme="@style/Theme.Leanback.Onboarding" />
-        <activity android:name="jp.jcom.mytv.data.ui.SettingsActivity"
+        <activity android:name=".ui.SettingsActivity"
             android:exported="true"
             android:theme="@style/LeanbackPreferences"
             />
         <activity
-            android:name="jp.jcom.mytv.data.ui.AuthenticationActivity"
+            android:name=".ui.AuthenticationActivity"
             android:theme="@style/Theme.Example.Leanback.GuidedStep" />
     </application>
 

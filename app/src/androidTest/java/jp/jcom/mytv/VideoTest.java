@@ -1,11 +1,11 @@
-package com.example.android.tvleanback;
+package jp.jcom.mytv;
 
 import android.media.MediaDescription;
 import android.net.Uri;
 import android.os.Parcel;
 import android.support.test.runner.AndroidJUnit4;
 
-import jp.jcom.mytv.data.model.Video;
+import jp.jcom.mytv.model.Video;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

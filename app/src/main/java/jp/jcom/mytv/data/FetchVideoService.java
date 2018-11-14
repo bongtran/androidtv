@@ -21,8 +21,6 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.util.Log;
 
-import com.example.android.tvleanback.R;
-
 import org.json.JSONException;
 
 import java.io.BufferedReader;
@@ -65,7 +63,7 @@ public class FetchVideoService extends IntentService {
             in.close();
 
             List<ContentValues> contentValuesList =
-                    builder.fetch(buf.toString());
+                    builder.fetchFromString(buf.toString());
             ContentValues[] downloadedVideoContentValues =
                     contentValuesList.toArray(new ContentValues[contentValuesList.size()]);
             getApplicationContext().getContentResolver().bulkInsert(VideoContract.VideoEntry.CONTENT_URI,

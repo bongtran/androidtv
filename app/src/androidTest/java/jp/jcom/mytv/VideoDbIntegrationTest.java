@@ -1,4 +1,4 @@
-package com.example.android.tvleanback;
+package jp.jcom.mytv;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -11,7 +11,7 @@ import jp.jcom.mytv.data.FetchVideoService;
 import jp.jcom.mytv.data.VideoContract;
 import jp.jcom.mytv.data.VideoDbBuilder;
 import jp.jcom.mytv.data.VideoDbHelper;
-import jp.jcom.mytv.data.ui.MainActivity;
+import jp.jcom.mytv.ui.MainActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;

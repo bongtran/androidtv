@@ -21,8 +21,6 @@ import android.media.Rating;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.example.android.tvleanback.R;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,6 +31,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.List;
+
+import jp.jcom.mytv.R;
 
 /**
  * The VideoDbBuilder is used to grab a JSON file from a server and parse the data
@@ -71,6 +71,12 @@ public class VideoDbBuilder {
     public @NonNull List<ContentValues> fetch(String url)
             throws IOException, JSONException {
         JSONObject videoData = fetchJSON(url);
+        return buildMedia(videoData);
+    }
+
+    public @NonNull List<ContentValues> fetchFromString(String data)
+            throws IOException, JSONException {
+        JSONObject videoData = new JSONObject(data);
         return buildMedia(videoData);
     }
 
